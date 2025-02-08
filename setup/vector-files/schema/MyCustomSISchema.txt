@@ -1,0 +1,16 @@
+name: MyCustomSISchema
+type: EDI schema definition
+description: this file contains a custom schema definition for item stock information data.
+
+schema name: MyCustomStockItem
+record delimiter: CR LF
+field delimiter: |
+file format: text dynamic
+file encoding: UTF-8
+
+record SILine, occurance[min 1, max 99999]
+    field SIId, numeric, 5
+    field SIWareHouseId, alphanumeric, 3
+    field SIItemNumber, alphanumeric, 10
+    field SIItemPerPack, numeric, 3
+    field SIStockQuantity, decimal

@@ -1,0 +1,11 @@
+name: mapping-rules
+type: processing instruction
+description: this file contains processing instructions around requests to create auto mapping rules.
+
+Following mapping rules can be applied when mapping two schema definitions (descending priority of appliance):
+
+1) If source and target schema contain fields matching along their name, data type and length the fields can be mapped using a direct assignment. The rule should be noted down using the following format: ["target-schema\hierarchy-path-to-field\field", "<", "source-schema\hierarchy-path-to-field\field"].
+
+2) If source and target schema contain fields matching along their name, but have different data type and length, the fields can be mapped using a lookup assignment. The rule should be noted down using the following format: ["target-schema\hierarchy-path-to-field\field", "XREF(fieldname)", "source-schema\hierarchy-path-to-field\field"].
+
+3) If source and target schema contain fields matching along their meaning, the fields can be mapped using a custom assignment. The rule should be noted down using the following format: ["target-schema\hierarchy-path-to-field\field", "EXP()", "source-schema\hierarchy-path-to-field\field"], where EXP() defines common known string expressions such as concat, trim, copy etc..
