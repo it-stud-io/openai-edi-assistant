@@ -2,4 +2,4 @@ https://www.stylusstudio.com/edifact/96A/0065.htm
 
 1) Please map schema MyCustomInvoice as input to EDIFACT D96A INVOIC as output using the mapping rules defined in processing information mapping-rules. Please create an output which is structured this way: 1) input schema - 2) output schema - 3) mapping rules.
 
-2) Please transform the attached order sample data file which is currently validating against schema MyCustomInvoice to match EDIFACT D96A INVOIC schema using the mapping rules you just defined.
+2) Please transform the attached invoice sample data file which is currently validating against schema MyCustomInvoice to match EDIFACT D96A INVOIC schema using the mapping rules you just defined.
