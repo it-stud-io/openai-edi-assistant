@@ -1,1 +1,5 @@
-thread/conversations/*.txt
+thread/conversations/Simon/*.txt
+thread/conversations/Amanda/*.txt
+
+__pycache__/
+*.pyc

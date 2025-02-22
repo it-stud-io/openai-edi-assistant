@@ -1,6 +1,6 @@
 # OpenAI EDI Assistant
 
-This repository contains information about creating a simple OpenAI EDI Assistant. The assistant is a simple chatbot that can be used to answer questions about Electronic Data Interchange (EDI) using the OpenAI API platform.
+This repository contains information about creating simple OpenAI EDI Assistants. The assistants are a simple chatbot that can be used to answer questions about Electronic Data Interchange (EDI) using the OpenAI API platform.
 
 All you have to do is create an account on the OpenAI platform: https://platform.openai.com/ and buy some credits
 
@@ -13,8 +13,8 @@ pip install openai
 
 ## Installation
 The folder "setup" contains information on setting up the OpenAI objects:
-- Assistant (Simon): The assistant object that will be used to interact with the OpenAI API using a chat interface
-- VectorStore (EdiStore): The vector store object that will be used by the assistant to provide optimized answers
+- Assistants (Amanda & Simon): The assistant object that will be used to interact with the OpenAI API using a chat interface
+- VectorStore (SteStore & EdiStore): The vector store object that will be used by the assistant to provide optimized answers
 - VectorFiles: The content for the vector store object (which will be used to provide optimized answers)
 
 To setup everything just simply open setup.py and change the values for
