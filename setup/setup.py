@@ -17,7 +17,7 @@ client = OpenAI(
     api_key=OPENAI_KEY
 )
 
-# create assistant
+# create assistants
 assistant_simon = client.beta.assistants.create(
     name=Assistants.Simon.name,
     instructions=Assistants.Simon.instructions,
@@ -26,7 +26,15 @@ assistant_simon = client.beta.assistants.create(
 )
 print(assistant_simon)
 
-# create vector store and upload vector files
+assistant_amanda = client.beta.assistants.create(
+    name=Assistants.Amanda.name,
+    instructions=Assistants.Amanda.instructions,
+    model=Assistants.Amanda.model,
+    tools=Assistants.Amanda.tools
+)
+print(assistant_amanda)
+
+# create vector stores and upload vector files
 vector_store_edi = client.beta.vector_stores.create(
     name=VectorStores.EdiStore.name
 )
@@ -39,9 +47,27 @@ file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
 print(file_batch.status)
 print(file_batch.file_counts)
 
-# update assistant with vector store
+vector_store_ste = client.beta.vector_stores.create(
+    name=VectorStores.SteStore.name
+)
+print(vector_store_ste)
+file_paths = ["./vectorfiles/ibmste/mts-structure.txt", "./vectorfiles/ibmste/resources-collection.txt", "./vectorfiles/ibmste/sample-mappingspec-smt.json"]
+file_streams = [open(path, "rb") for path in file_paths]
+file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
+  vector_store_id = vector_store_ste.id, files = file_streams
+)
+print(file_batch.status)
+print(file_batch.file_counts)
+
+# update assistants with vector store
 assistant_simon = client.beta.assistants.update(
   assistant_id = assistant_simon.id,
   tool_resources = {"file_search": {"vector_store_ids": [vector_store_edi.id]}},
 )
 print(assistant_simon)
+
+assistant_amanda = client.beta.assistants.update(
+  assistant_id = assistant_amanda.id,
+  tool_resources = {"file_search": {"vector_store_ids": [vector_store_ste.id]}},
+)
+print(assistant_amanda)

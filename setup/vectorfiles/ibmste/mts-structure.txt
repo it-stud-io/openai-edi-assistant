@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TTMAKER SYSTEM "ttmaker60.dtd">
+<?ANALYZE?><TTMAKER Version="n.n">
+<NEWTREE Filename="install_dir\examples\dsgnstud\ttmaker\export\element.mtt">
+<ROOT SimpleTypeName="Element" SetUpProperties="DEFAULT" SetUpComponents=
+"DELETE" OrderSubtypes="ASCENDING"><Sequence partition="NO"><Implicit/>
+</Sequence>
+<CharTextWestern><Size Min="0" Max="S"/>
+<Western CharSet="NATIVE"/>
+<ValueRestrictions IgnoreCase="NO" Rule="INCLUDE"></ValueRestrictions>
+</CharTextWestern>
+</ROOT>
+<ITEM SimpleTypeName="Acc't#Qual'rCd" CategoryOrItemParent="Element"
+ Description="Acct No. Qualifier Code 
+(896 V3050)" partition="NO" OrderSubtypes="ASCENDING"><CharTextWestern>
+<Size Min="0" Max="2"/>
+<PadText Justify="LEFT" ApplyPad="ANYCONTEXT"><PadValue><SP></PadValue>
+<PaddedToFixedSize Length="2"/>
+</PadText>
+<Western CharSet="NATIVE"/>
+<ValueRestrictions IgnoreCase="NO" Rule="INCLUDE"><Value Description=
+"Time Deposit">01</Value>
+<Value Description="Stock">05</Value>
+<Value Description="Bond">06</Value>
+<Value Description="Life Insurance Face Value">07</Value>
+<Value Description="Retirement Acct - Vested Interest">08</Value>
+<Value Description="Demand Deposit">DA</Value>
+<Value Description="Return Items on Demand Deposit Acct">RD</Value>
+<Value Description="Return Items on Savings Acct">RS</Value>
+<Value Description="Savings">SG</Value>
+<Value Description="Mutually Defined">ZZ</Value>
+</ValueRestrictions>
+</CharTextWestern>
+</ITEM>
+</NEWTREE>
+</TTMAKER>
