@@ -1,6 +1,10 @@
-# OpenAI EDI Assistant
+# OpenAI EDI Assistants
 
 This repository contains information about creating simple OpenAI EDI Assistants. The assistants are a simple chatbot that can be used to answer questions about Electronic Data Interchange (EDI) using the OpenAI API platform.
+
+Following assistants are available:
+- Amanda: A smart assistant that can answer questions about IBM STE and EDI transformation
+- Simon: A smart assistant that can answer questions about EDI and mapping transformation in general
 
 All you have to do is create an account on the OpenAI platform: https://platform.openai.com/ and buy some credits
 
